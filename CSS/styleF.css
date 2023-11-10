@@ -1,0 +1,67 @@
+body{
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/25/17/56/color-2174049_1280.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed ;
+  
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight:lighter;
+}
+form {
+  text-align: center;
+  font-family:'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 30px;
+  border:2px solid #007bff;
+  background-color: #FFFFFF;
+}
+input[type="submit"] {
+  height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 25px;
+    background-color: #c4dbb4;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+input:hover {
+  background-color: #abccb1; 
+  transform: scale(1.05);
+}
+.terminos label {
+  display: block;
+  margin-top: 10px;
+}
+
+.alert {
+  background-color: #ff5555;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 70%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: justify;
+}
+
+
+
+
