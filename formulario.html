@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/styleF.css">
+  <link rel = "icon" href = "imagenes/LogoEUSKK1.jpg"
+            type = "image/x-icon">
+
+        </head>
+
+
+<body>
+    <script>
+        function validarformulario() {
+            // var x = document.querySelectorAll('input[name="terminos[]"]:checked');
+            // if (checked.Length == 0) {
+            //     alert("Tienes que seleccionar mínimo 1 evento");
+            //     return false;
+            //     }
+            var x=document.forms["formulario"]["EladioCarrion"].checked;
+            var z=document.forms["formulario"]["Motociclismo"].checked;
+            var c=document.forms["formulario"]["Gamergy"].checked;
+            var v=document.forms["formulario"]["ReyLeon"].checked;
+            // console.log(x + z + c + v);
+                if ((x == false) & (z == false) & (c == false) & (v == false)) {
+                    alert("Tienes que seleccionar como minimo 1 evento");
+                    return false;
+                    }
+
+            var y=document.forms["formulario"]["Condiciones"].checked;
+            console.log(y);
+                if (y == false) {
+                    alert("Tienes que aceptar los términos y condiciones");
+                    return false;
+                    }
+            
+                
+                }
+            </script>
+
+    </script>
+
+    <div class="formulario-">
+        <form action="insert.php" form name="formulario" onsubmit="return validarformulario()">
+    
+        <h1>Registrarse</h1>
+   
+        <label for="Nombre">Nombre:</label>
+        <input type="hidden" id="usuario" name="db" value="kirol_euskultura">
+        <input type="hidden" id="usuario" name="table" value="usuario">
+        <input type="text" id="Nombre" name="Nombre" required>
+    
+        <label for="Apellidos">Apellidos:</label>
+        <input type="text" id="Apellidos" name="Apellidos"required>
+
+        <label for="Telefono">Telefono:</label>
+        <input type="number" id="Telefono" name="Telefono" required>
+
+        <label for="Fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento" required>
+
+        <label for="Domicilio">Domicilio:</label>
+        <input type="text" id="Domicilio" name="Domicilio" required>
+
+        <label for="Correo_electronico">Correo electronico:</label>
+        <input type="email" id="Correo_electronico" name="Correo_electronico" required>
+
+        <label for="Contrasena">Contrasena</label>
+        <input type="password" id="Contrasena" name="Contrasena" required>
+
+
+        <label for="terminos" name="terminos">       
+            <h2>Selecciona el evento al que deseas asistir.</h2>
+            <h2 style="font-size: medium;">Puedes seleccionar mas de uno si lo deseas.</h2>
+            <label value="EladioCarrion">Eladio Carrion.<input type="checkbox" id="EladioCarrion" name="EladioCarrion"></label>
+            <label for="Motociclismo">Motociclismo.<input type="checkbox" id="Motociclismo" name="Motociclismo"></label>
+            <label for="Gamergy">Gamergy.<input type="checkbox" id="Gamergy" name="Gamergy"></label>
+            <label for="ReyLeon">Rey Leon.<input type="checkbox" id="ReyLeon" name="ReyLeon"></label>
+        </label>
+            
+        <label for="Condiciones">He leido y acepto los <a href="PDFs/Terminos y condiciones.pdf" >Terminos y condiciones.</a></label><input type="checkbox" id="Condiciones" name="Condiciones"></label><br/><br/>
+
+        <input type="submit" value="Registrarse"></input>
+
+    </form>
+    </div>
+
+</body>
+
+</html>
